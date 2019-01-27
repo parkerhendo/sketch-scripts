@@ -1,0 +1,11 @@
+{
+  "name": "node-sketch-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Parker Henderson <parker@parkerhendo.com>",
+  "license": "MIT",
+  "dependencies": {
+    "chroma-js": "^2.0.2",
+    "node-sketch": "^0.12.0"
+  }
+}
