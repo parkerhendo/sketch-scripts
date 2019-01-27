@@ -6,6 +6,7 @@
   "license": "MIT",
   "dependencies": {
     "chroma-js": "^2.0.2",
-    "node-sketch": "^0.12.0"
+    "node-sketch": "^0.12.0",
+    "path": "^0.12.7"
   }
 }
