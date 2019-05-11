@@ -25,8 +25,7 @@ module.exports = (colors) => {
     const a = Math.round(color.alpha * 100);
 
     // merge r, g, b into HEX code
-    const hex = chroma([r, g, b]).hex();
-
+    const hex = chroma([r, g, b]).hex().toUpperCase();
     // push new value to array
     hexArr.push(hex);
   });
