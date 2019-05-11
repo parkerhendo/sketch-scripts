@@ -1,11 +1,11 @@
 const ns = require('node-sketch');
 const path = require('path');
 
-const countDocumentColors = require('./color/countDocumentColors');
-const returnDocumentOpacities = require('./color/returnDocumentOpacities');
+const getColors = require('./color/getColors');
+const returnDocumentOpacities = require('./color/getOpacities');
 
 (async function() {
   const sketch = await ns.read(path.join(__dirname, '../', 'design.sketch'));
-  await countDocumentColors(sketch, 0)
+  await getColors(sketch)
 //   await returnDocumentOpacities(sketch, 0);
 })();

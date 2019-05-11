@@ -1,23 +1,24 @@
-// require node-sketch
+// require modules 
 const ns = require('node-sketch');
+const chalk = require('chalk');
 
 // require helper functiins
 const convertToHEX = require('./utils/converToHEX');
 const removeRepeats = require('./utils/removeRepeats');
 const logger = require('./utils/logger');
-const chalk = require('chalk');
 
 /**
  * Return all colors on target page in HEX format
  * @param {string} file - path to the desired scketch file
  * @param {number} page - reference the desired page (value starts at 0)
- */
+*/
 
 module.exports = (file) => {
     logger('#fff', '', '\n✨ Retrieving colors...');
 
     file.pages.forEach((page) => {
-        logger('#fff', '', `\nColors found in ${page.name}\n`)
+        logger('#fff', '', `\nColors found in ${page.name}`)
+        console.log('______________________________________________\n')
         // create array of all colors on target page
         const colors = page.getAll('color');
         // convert all colors in array to HEX format (######)
@@ -39,7 +40,7 @@ module.exports = (file) => {
             // print and reset values if color does not equal the reference
             else if (ref !== sorted[i]) {
                 // print color and number of times it appears in document
-                logger(ref, ref, `occurs ${count} times in this document.`);
+                logger(ref, ref, `occurs ${count} times on this page.`);
                 // reset ref to new value
                 ref = sorted[i];
                 // reset count
