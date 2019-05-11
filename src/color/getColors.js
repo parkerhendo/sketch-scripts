@@ -15,7 +15,6 @@ const logger = require('./utils/logger');
 
 module.exports = (file) => {
     logger('#fff', '', '\n✨ Retrieving colors...');
-
     file.pages.forEach((page) => {
         logger('#fff', '', `\nColors found in ${page.name}`)
         console.log('______________________________________________\n')
