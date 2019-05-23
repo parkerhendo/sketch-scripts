@@ -4,7 +4,7 @@ A collection of scripts to automate the boring things. Will be a sketch plugin s
 
 ## Setup
 
-Clone the repo and run `yarn` to install dependencies.
+Clone the repo and run `yarn` to install dependencies. As of now, all commands must be run from within the is folder, so it is advised you make a copy of your sketch file and place it in here before trying to run any scripts.
 
 ## Commands
 
