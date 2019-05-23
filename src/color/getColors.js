@@ -3,9 +3,9 @@ const ns = require('node-sketch');
 const chalk = require('chalk');
 
 // require helper functiins
-const convertToHEX = require('./utils/converToHEX');
-const removeRepeats = require('./utils/removeRepeats');
-const logger = require('./utils/logger');
+const convertToHEX = require('../utils/converToHEX');
+const removeRepeats = require('../utils/removeRepeats');
+const logger = require('../utils/logger');
 
 /**
  * Return all colors on target page in HEX format
