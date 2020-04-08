@@ -18,9 +18,9 @@ module.exports = (file) => {
     symbols.forEach(sym => {
         console.log(`${sym.name}-------------`);
         sym.layers.forEach(layer => {
-            if (layer.get('fill').fillType !== 0) {
-                layer.destroy();
-            }
+          if (layer._class === 'SymbolInstance') {
+            layer.destroy();
+          };
         })
         const colors = sym.getAll('color');
         const hexCodes = convertToHEX(colors);
