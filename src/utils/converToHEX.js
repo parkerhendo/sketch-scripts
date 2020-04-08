@@ -5,29 +5,16 @@ const chroma = require('chroma-js');
  * @param {Array} colors - Array of colors passed in from sketch document
  **/
 
-module.exports = (colors) => {
-  // create empty array
-  const hexArr = [];
+module.exports = (color) => {
 
-  // convert color values to HEX
-  const hexTransform = colors.map((color) => {
+  const r = Math.round(color.red * 255);
 
-    // red
-    const r = Math.round(color.red * 255);
+  const g = Math.round(color.green * 255);
 
-    // blue
-    const g = Math.round(color.green * 255);
+  const b = Math.round(color.blue * 255);
 
-    // green
-    const b = Math.round(color.blue * 255);
-    
-    // alpha
-    const a = Math.round(color.alpha * 100);
+  const opacity = Math.round(color.alpha * 100);
 
-    // merge r, g, b into HEX code
-    const hex = chroma([r, g, b]).hex().toUpperCase();
-    // push new value to array
-    hexArr.push(hex);
-  });
-  return hexArr;
+  const hex = chroma([r, g, b]).hex().toUpperCase();
+  return {hex, opacity};
 };

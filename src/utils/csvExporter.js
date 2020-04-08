@@ -19,7 +19,7 @@ const csvExporter = (data, title) => {
   const csvExporter = new ExportToCsv(options);
 
   const csvData = csvExporter.generateCsv(data, true)
-  fs.writeFileSync(path.join(__dirname, '../../data', "data.csv"),csvData)
+  fs.writeFileSync(path.join(__dirname, '../../data', `${title}.csv`),csvData)
 
 };
 
