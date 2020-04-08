@@ -5,7 +5,7 @@ const getColors = require('./color/getColors');
 const getTextStyles = require('./text/getTextStyle');
 
 (async function() {
-  const sketch = await ns.read(path.join(__dirname, '../', 'design.sketch'));
-//   await getColors(sketch)
-  await getTextStyles(sketch)
+  const sketch = await ns.read(path.join(__dirname, '../', 'sketch/account.sketch'));
+  await getColors(sketch)
+  // await getTextStyles(sketch)
 })();
